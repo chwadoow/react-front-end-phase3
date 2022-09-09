@@ -1,5 +1,8 @@
-import React , {useEffect,useState}from 'react'
-
+import React from 'react'
+import {
+  MDBCarousel,
+  MDBCarouselItem,
+} from 'mdb-react-ui-kit';
 // import AppointmentList from './AppointmentList';
 
 function Home() {
@@ -24,6 +27,7 @@ function Home() {
     <div id="home">
       <h1>Home </h1>
       <h3>Appointments</h3>
+      <h3>Manage Your Everyday Appointments </h3>
 
   {/* <AppointmentList
   appointments={appointments}

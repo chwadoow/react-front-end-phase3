@@ -9,7 +9,7 @@ function Appointments() {
           .then((r) => r.json())
           .then((data) => setAppointments(data));
       }, []);
-     
+    
     function handleDeleteItem (id){
         const updatedItems = appointments.filter((item)=> item.id !== id)
         setAppointments(updatedItems)
