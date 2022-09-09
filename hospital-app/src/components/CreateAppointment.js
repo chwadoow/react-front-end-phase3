@@ -2,10 +2,11 @@
  
  function CreateAppointment({handleAddAppointment}) {
     const[formData, setFormData] = useState({
+        appointment_date:'',
         appointment_duration: '',
         appointment_reason: '',
-        type: '',
-        doc_id: '',
+        appointment_type: '',
+        doctor_id: '',
         patient_id: '',
        
     })
@@ -29,11 +30,11 @@
         .then((r) => r.json())
         .then((data) => handleAddAppointment(data))
         setFormData(
-            {
+            {   appointment_date:'',
                 appointment_duration: '',
                 appointment_reason: '',
-                type: '',
-                doc_id: '',
+                appointment_type: '',
+                doctor_id: '',
                 patient_id: '',
                
             }
@@ -47,7 +48,7 @@
          <form className="row g-3" onSubmit={handleSubmit}>
          <div className="col-md-6">
                     <label className="form-label">Enter Datetime</label>
-                    <input type="datetime-local" className="form-control" id="appointment_date"  placeholder="Enter Duration"  onChange={handleChange} value={formData.appointment_date} required/>
+                    <input type="datetime-local" className="form-control" id="appointment_date"  placeholder="Enter Date"  onChange={handleChange} value={formData.appointment_date} required/>
                 </div>
                   <div className="col-md-6">
                     <label className="form-label">Duration</label>
@@ -59,11 +60,11 @@
                 </div>
                 <div className="col-md-6">
                     <label className="form-label">Type</label>
-                    <input type="text" className="form-control" id="type" placeholder="Type" onChange={handleChange} value={formData.type} required/>
+                    <input type="text" className="form-control" id="appointment_type" placeholder="Type" onChange={handleChange} value={formData.appointment_type} required/>
                 </div>
                 <div className="col-md-6">
                     <label className="form-label">Doc_id</label>
-                    <input type="integer" className="form-control" id="doc_id" placeholder="Enter doc_id" onChange={handleChange} value={formData.doc_id} required/>
+                    <input type="integer" className="form-control" id="doctor_id" placeholder="Enter doc_id" onChange={handleChange} value={formData.doctor_id} required/>
                 </div>
                 <div className="col-md-6">
                     <label className="form-label">Patient_id</label>
