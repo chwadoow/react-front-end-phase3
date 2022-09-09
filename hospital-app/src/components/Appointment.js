@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 function Appointment({item,onItemDelete}) {
 const {id,appointment_date,appointment_duration,appointment_reason,appointment_type} = item
-
+console.log(item)
 
 function handleDelete (){
   fetch (`http://localhost:9292/appointments/${id}`,{
@@ -13,13 +13,14 @@ function handleDelete (){
   return (
     <div>
     
-       <table className="table table-striped table-hover"  >
+       <table className="table table-striped table-hover" style={{padding:20}}  >
                             <thead>
                                 <tr>
                                 <th scope="col">Date</th>
                                 <th scope="col">Duration</th>
                                 <th scope="col">Reason</th>
                                 <th scope="col">Type</th>
+                                <th scope="col">Doctor doctor_firstname</th>
                               
                                 </tr>
                             </thead>
@@ -30,6 +31,7 @@ function handleDelete (){
                                 <td>{appointment_duration}</td>
                                 <td>{appointment_reason}</td>
                                 <td>{appointment_type}</td>
+                                <td>{item.doctor.doctor_firstname} { item.doctor.doctor_lastname}</td>
                                
                                 <td>
                                     <button type="button" className="btn btn-danger" onClick={handleDelete}>DELETE</button>
@@ -41,7 +43,7 @@ function handleDelete (){
                             </tbody>
                            
                             </table>  
-                            <Link to={`/appointments/${id}`}>see more</Link>
+                         
                             </div>
 
 
