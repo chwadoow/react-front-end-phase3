@@ -7,7 +7,7 @@ function AppointmentDetail(id) {
   const {id} = useParams()
 
   useEffect(() => {
-    fetch(`http://localhost:9292/appointments/${id}`)
+    fetch(`https://appointmentmos.herokuapp.com/appointments/${id}`)
         .then(r => r.json())
         .then(data => console.log(data))
 }, [id])
