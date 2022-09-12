@@ -21,7 +21,7 @@
 
     function handleSubmit(e){
         e.preventDefault()
-        fetch(`http://localhost:9292/appointments`, {
+        fetch("https://appointmentmos.herokuapp.com/appointments", {
             method: "POST",
             headers: {
                 "Content-Type" : "application/json"
