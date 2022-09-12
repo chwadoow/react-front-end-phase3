@@ -1,13 +1,15 @@
 
-import './App.css';
+
 import    React from "react"
 import {Switch,Route} from 'react-router-dom'
 import Home from './components/Home';
-import CreateAppointment from './components/CreateAppointment';
+
 import NavBar from './components/NavBar';
 import AppointmentDetail from './components/Appointment'
 import Appointments from './components/Appointments';
 import About from './components/About'
+
+
 function App() {
   return (
     <div  className='App'>
