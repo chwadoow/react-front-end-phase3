@@ -23,8 +23,8 @@ function handleDelete (){
                                 <th scope="col">Duration</th>
                                 <th scope="col">Reason</th>
                                 <th scope="col">Type</th>
-                                {/* <th scope="col">Doctor name</th> 
-                                <th scope="col">patient_firstname</th>  */}
+                                <th scope="col">Doctor name</th> 
+                                <th scope="col">patient_firstname</th> 
                               
                                 </tr>
                             </thead>
@@ -35,8 +35,8 @@ function handleDelete (){
                                 <td>{appointment_duration}</td>
                                 <td>{appointment_reason}</td>
                                 <td>{appointment_type}</td>
-                                {/* <td>{item.doctor.doctor_firstname} { item.doctor.doctor_lastname}</td> 
-                                <td>{item.patient.patient_firstname} { item.patient.patient_lastname}</td>  */}
+                                <td>{item.doctor.doctor_firstname} { item.doctor.doctor_lastname}</td> 
+                                <td>{item.patient.patient_firstname} { item.patient.patient_lastname}</td> 
                                
                                 <td>
                                     <button type="button" className="btn btn-danger" onClick={handleDelete}>DELETE</button>
