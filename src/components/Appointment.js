@@ -16,7 +16,7 @@ function handleDelete (){
   return (
     <div>
     
-       <table className="table table-striped table-hover" style={{padding:20}}  >
+       <table className="table table-striped table-hover"  >
                             <thead>
                                 <tr>
                                 <th scope="col">Date</th>
