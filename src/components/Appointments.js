@@ -2,13 +2,13 @@ import React , {useEffect,useState}from 'react'
 import AppointmentList from './AppointmentList';
 import CreateAppointment from './CreateAppointment';
 function Appointments() {
+ const [appointments,setAppointments]= useState([])
 
-    const [appointments,setAppointments]= useState([])
     useEffect(() => {
         fetch("https://appointmentmos.herokuapp.com/appointments")
           .then((r) => r.json())
           .then((data) => setAppointments(data));
-      }, []);
+      }, [appointments]);
     
     function handleDeleteItem (id){
         const updatedItems = appointments.filter((item)=> item.id !== id)
