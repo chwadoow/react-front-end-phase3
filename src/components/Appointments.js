@@ -17,6 +17,7 @@ function Appointments() {
 
       function handleAddAppointment(newAppointment){
         setAppointments([...appointments,newAppointment])
+        // console.log(newAppointment)
       }
   return (
   

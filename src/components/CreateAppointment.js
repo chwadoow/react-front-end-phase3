@@ -1,7 +1,7 @@
  import React,{useState} from 'react'
  import 'bootstrap/dist/css/bootstrap.min.css';
 
- function CreateAppointment({handleAddAppointment}) {
+ function CreateAppointment({onAddAppointment}) {
     const[formData, setFormData] = useState({
         appointment_date:'',
         appointment_duration: '',
@@ -29,7 +29,7 @@
             body: JSON.stringify(formData),
         })
         .then((r) => r.json())
-        .then((data) => handleAddAppointment(data))
+        .then((data) => {onAddAppointment(data)})
         setFormData(
             {   appointment_date:'',
                 appointment_duration: '',
