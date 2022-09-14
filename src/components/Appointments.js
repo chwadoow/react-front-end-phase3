@@ -8,7 +8,7 @@ function Appointments() {
         fetch("https://appointmentmos.herokuapp.com/appointments")
           .then((r) => r.json())
           .then((data) => setAppointments(data));
-      }, [appointments]);
+      }, []);
     
     function handleDeleteItem (id){
         const updatedItems = appointments.filter((item)=> item.id !== id)

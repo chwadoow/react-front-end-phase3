@@ -1,9 +1,5 @@
 import React from 'react'
 
-
-
-
-
 function Appointment({item,onItemDelete}) {
 const {id,appointment_date,appointment_duration,appointment_reason,appointment_type} = item
 
